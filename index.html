@@ -6,39 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monate Branding Solutions</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=AspireSC-Regular&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
 
 </head>
 
 <body>
     <header>
-    <!-- Desktop Nav -->
-    <nav class="nav-desktop">
-        <a href="#home" class="logo">Monate Branding Solutions (PTY) LTD</a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#find-us">Where to Find Us</a></li>
-            <li><a href="#about">About Us</a></li>
-        </ul>
-    </nav>
+        <!-- Desktop Nav -->
+        <nav class="nav-desktop">
+            <a href="#home" class="logo">Monate Branding Solutions (PTY) LTD</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#find-us">Where to Find Us</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
 
-    <!-- Mobile Nav -->
-    <nav class="nav-mobile">
-        <a href="#home" class="logo">Monate Branding Solutions (PTY) LTD</a>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <ul class="mobile-menu" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#find-us">Where to Find Us</a></li>
-            <li><a href="#about">About Us</a></li>
-        </ul>
-    </nav>
-</header>
+        <!-- Mobile Nav -->
+        <nav class="nav-mobile">
+            <a href="#home" class="logo">Monate Branding Solutions (PTY) LTD</a>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="mobile-menu" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#find-us">Where to Find Us</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
 
@@ -77,46 +76,26 @@ We’re not your average branding company. We specialize in eye-catching signage
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section services">
-        <div class="container">
-            <h2 class="section-title">What We Offer</h2>
-            <div class="services-grid">
-                <div class="service-card" onclick="selectService('Consulting')">
-                    <!-- <div class="service-icon">🚯</div> -->
-                    <h3>Solvent Printing</h3>
-                    <p>Sign Boards <br> Correx Boards <br> Print & Cut Stickers <br> Vehicle Wrapping <br> Cut Outs</p>
-                </div>
-                <div class="service-card" onclick="selectService('Digital Marketing')">
-                    <!-- <div class="service-icon">👕</div> -->
-                    <h3>DTF Printing</h3>
-                    <p>Custom Hoodies <br> Custom Shirts <br> Custom Caps/Hats <br> Bags <br> All Business Apparel</p>
-                </div>
-                <div class="service-card" onclick="selectService('Web Development')">
-                    <!-- <div class="service-icon">☕</div> -->
-                    <h3>UV-DTF Printing</h3>
-                    <p>Custom Stickers <br> Tumblers <br> Mugs <br> Glasses <br> Phone Case Stickers <br> Branding
-                        Stickers</p>
-                </div>
-                <!-- <div class="service-card" onclick="selectService('Data Analytics')">
-                    <div class="service-icon">📊</div>
-                    <h3>Data Analytics</h3>
-                    <p>Transform your data into actionable insights with our advanced analytics and reporting solutions.</p>
-                </div>
-                <div class="service-card" onclick="selectService('Cloud Solutions')">
-                    <div class="service-icon">☁️</div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Secure and scalable cloud infrastructure solutions to modernize your business operations.</p>
-                </div>
-                <div class="service-card" onclick="selectService('Support & Maintenance')">
-                    <div class="service-icon">🔧</div>
-                    <h3>Support & Maintenance</h3>
-                    <p>Ongoing support and maintenance services to ensure your systems run smoothly and efficiently.</p>
-                </div> -->
+    <!-- Updated Services Section -->
+<section id="services" class="section services">
+    <div class="container">
+        <h2 class="section-title">What We Offer</h2>
+        <div class="services-grid">
+            <div class="service-card" onclick="window.open('solvent-printing.html', '_blank')">
+                <h3>Solvent Printing</h3>
+                <p>Sign Boards <br> Correx Boards <br> Print & Cut Stickers <br> Vehicle Wrapping <br> Correx Cut Outs <br> Contra-vision <br> Wallpaper <br> Canvas <br> PVC Banners up to 3.1m Wide <br> Pull-up Banners </p>
+            </div>
+            <div class="service-card" onclick="window.open('dtf-printing.html', '_blank')">
+                <h3>DTF (Direct-To-Film)</h3>
+                <p>Hoodies <br> Soft Shell Jackets <br> T-Shirts <br> Caps/Hats <br> Bags <br> All Business Apparel</p>
+            </div>
+            <div class="service-card" onclick="window.open('uv-dtf-stickers.html', '_blank')">
+                <h3>UV-DTF Stickers</h3>
+                <p>Tumblers <br> Mugs <br> Glass <br> Metal <br> Plastic <br> Wood <br> Phone Case Stickers</p>
             </div>
         </div>
-    </section>
-
-
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact">
@@ -131,15 +110,24 @@ We’re not your average branding company. We specialize in eye-catching signage
                         <option value="Solvent Printing">Correx Boards </option>
                         <option value="Solvent Printing">Print & Cut Stickers</option>
                         <option value="Solvent Printing">Vehicle Wrapping</option>
-                        <option value="Solvent Printing">Cut Outs</option>
-                        <option value="DTF Printing">Custom Hoodies</option>
-                        <option value="DTF Printing">Custom Shirts</option>
-                        <option value="DTF Printing">Custom Caps/Hats</option>
+                        <option value="Solvent Printing">Correx Cut Outs</option>
+                         <option value="Solvent Printing">Contra-vision</option>
+                        <option value="Solvent Printing">Wallpaper</option>
+                        <option value="Solvent Printing">Canvas</option>
+                        <option value="Solvent Printing">PVC Banners up to 3.1m Wide</option>
+                        <option value="Solvent Printing">Pull-up Banners</option>
+                        <option value="DTF Printing">Hoodies</option>
+                        <option value="DTF Printing">T-Shirts</option>
+                        <option value="DTF Printing">Caps/Hats</option>
                         <option value="DTF Printing">Bags</option>
                         <option value="DTF Printing">All Business Apparel</option>
-                        <option value="UV-DTF Printing">Custom Stickers</option>
+                        <option value="UV-DTF Printing">Stickers</option>
                         <option value="UV-DTF Printing">Tumblers</option>
                         <option value="UV-DTF Printing">Mugs</option>
+                        <option value="UV-DTF Printing">Glass</option>
+                        <option value="UV-DTF Printing">Metal</option>  
+                        <option value="UV-DTF Printing">Plastic</option>
+                        <option value="UV-DTF Printing">Wood</option>
                         <option value="UV-DTF Printing">Glasses</option>
                         <option value="UV-DTF Printing">Phone Case Stickers</option>
                         <option value="UV-DTF Printing">Branding Stickers</option>
@@ -178,7 +166,8 @@ We’re not your average branding company. We specialize in eye-catching signage
         <div class="container">
             <h2 class="section-title">Where to Find Us</h2>
             <div class="find-us-content">
-                <p><strong>Address:</strong> 5 Pansy Pl, Doornpoort, Pretoria, 0186, South Africa</p>
+                <p><strong>Address:</strong> 5 Pansy Pl, Doornpoort, Pretoria, 0186, South Africa <br> +27 82 889 1979
+                    <br> info.monatebs@gmail.com </p>
                 <a href="https://maps.app.goo.gl/ytw7EDLmhmmVZYaD8?g_st=aw" target="_blank" class="map-link">View on
                     Google Maps</a>
 
@@ -251,11 +240,12 @@ We’re not your average branding company. We specialize in eye-catching signage
     </footer>
 
     <script>
-        // Function to select a service and scroll to contact
-        function selectService(serviceName) {
-            document.getElementById('service').value = serviceName;
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        }
+
+        // Remove or comment out the old selectService function
+        // function selectService(serviceName) {
+        //     document.getElementById('service').value = serviceName;
+        //     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        // }
 
         // Handle form submission
         function handleSubmit(event) {
@@ -287,22 +277,10 @@ We’re not your average branding company. We specialize in eye-catching signage
             });
         });
 
-        // Add scroll effect to header
-        // window.addEventListener('scroll', function() {
-        //     const header = document.querySelector('header');
-        //     if (window.scrollY > 100) {
-        //         header.style.background = 'rgba(102, 126, 234, 0.95)';
-        //         header.style.backdropFilter = 'blur(10px)';
-        //     } else {
-        //         header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-        //         header.style.backdropFilter = 'none';
-        //     }
-        // });
-
-            function toggleMenu() {
-        const nav = document.getElementById('navLinks');
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
             nav.classList.toggle('show');
-    }
+        }
     </script>
 
 
