@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
 
 @font-face {
     font-family: 'AspireSC';
@@ -16,14 +21,15 @@
 body {
     font-family: 'AspireSC', sans-serif;
     color: white;
+    background-color: #131313;
+    margin: 0;
+    padding: 0;
     text-shadow:
         -1px -1px 0 black,
          1px -1px 0 black,
         -1px  1px 0 black,
          1px  1px 0 black;
 }
-
-
 
 .container {
     max-width: 1200px;
@@ -51,7 +57,7 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size:1.2rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
@@ -63,58 +69,60 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #fd8d10;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.5rem; /* Made smaller padding */
 }
 
-.nav-links {
+.nav-desktop .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem; /* Reduced gap */
     margin: 0;
     padding: 0;
 }
 
-.nav-links a {
+.nav-desktop .nav-links a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.9rem !important; /* Even smaller */
+    line-height: 1.2;
     transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem; /* Smaller padding */
     border-radius: 25px;
 }
 
-.nav-links a:hover {
+.nav-desktop .nav-links a:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('mbswp2.png');
-    background-size: cover;
+    background-image: url('desktopmbsnew.png');
+    background-size: contain; /* Adjusted for better fit */
     background-position: center;
     background-repeat: no-repeat;
-
+    background-color: #131313;
     color: white;
     /* Set a fixed or minimum height */
     min-height: 600px; /* adjust this to how tall you want the box */
     /* Or you can use fixed height: height: 400px; */
-
+    /* margin-top: 60px;  */
     padding: 0; /* remove padding if you want */
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-.hero::before {
+/* .hero::before {
     content: '';
     position: absolute;
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
+    background-size: 50px 50px; */
     /* animation: float 20s infinite linear; */
-}
+/* } */
 
 @keyframes float {
     0% {
@@ -178,6 +186,7 @@ nav {
 /* Sections */
 .section {
     padding: 80px 0;
+    background-color: #131313;
 }
 
 .section-title {
@@ -219,7 +228,6 @@ nav {
     margin: 0 auto;
 }
 
-
 /* .about-image {
     text-align: center;
 } */
@@ -237,12 +245,10 @@ nav {
 } */
 
 /* Services Section */
-
 .services {
     background-color: #131313;
     /* or whatever dark shade you like */
 }
-
 
 .services-grid {
     display: grid;
@@ -381,44 +387,119 @@ footer {
     .nav-mobile {
         display: flex;
         align-items: center;
-        justify-content: space-between; /* Changed to space-between to accommodate logo */
+        justify-content: space-between;
         background-color: #fd8d10;
-        padding: 1rem 2rem;
+        padding: 0.5rem 0.8rem; /* Even less padding */
         position: relative;
+        min-height: 50px; /* Smaller height */
     }
 
-    /* Mobile logo/company name */
-    .mobile-logo {
-        font-size: 1.5rem;
+    /* Mobile logo/company name - Much smaller */
+    .nav-mobile .logo {
+        font-size: 0.85rem !important; /* Much smaller text */
         font-weight: bold;
         color: white;
         text-decoration: none;
+        flex: 1; /* Take available space */
+        margin-right: 0.5rem; /* Less margin */
+        line-height: 1.1;
+        white-space: normal; /* Allow wrapping for line breaks */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Add ... if too long */
+        max-width: calc(100% - 50px); /* More space for text */
     }
 
     .hamburger {
         display: block;
-        font-size: 2rem;
+        font-size: 1.5rem; /* Smaller hamburger */
         background: none;
         border: none;
         cursor: pointer;
         color: white;
+        padding: 0.3rem;
+        flex-shrink: 0; /* Don't shrink */
+        min-width: 40px; /* Smaller touch target */
+        text-align: center;
     }
 
-   .mobile-menu {
-    max-height: 250px; /* limit the visible height */
-    overflow-y: auto;  /* add vertical scroll */
-    scrollbar-width: thin; /* for Firefox */
-    scrollbar-color: #fff rgba(0,0,0,0.2); /* thumb + track colors */
-}
+    /* Complete mobile menu definition */
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(220, 120, 10, 0.95);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        padding: 1rem;
+        list-style: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 10px 10px;
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+        z-index: 1001; /* Ensure it's on top */
+        max-height: 250px; /* limit the visible height */
+        overflow-y: auto;  /* add vertical scroll */
+        scrollbar-width: thin; /* for Firefox */
+        scrollbar-color: #fff rgba(0,0,0,0.2); /* thumb + track colors */
+    }
+
+    .mobile-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
     .mobile-menu a {
+        display: block;
         padding: 0.75rem;
         text-decoration: none;
         color: white;
+        font-size: 0.85rem;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .mobile-menu a:hover {
+        background: rgba(255, 255, 255, 0.2);
     }
 
     .mobile-menu.show {
         display: flex;
+    }
+
+    /* Service hero styles */
+    .service-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .service-hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Service content layout */
+    .service-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Features grid layout */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gallery grid layout */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA button styles */
+    .cta-button {
+        display: block;
+        margin: 0.5rem auto;
+        width: 80%;
+        max-width: 300px;
+        padding: 12px 25px;
+        font-size: 1rem;
     }
 
     /* Mobile hero styles */
@@ -427,7 +508,9 @@ footer {
         background-size: 100% auto;
         background-position: center top;
         background-repeat: no-repeat;
+        background-color: #131313;
         min-height: 400px;
+        margin-top: 50px; /* Adjusted for mobile header height */
     }
 
     .hero::before {
@@ -445,19 +528,14 @@ footer {
         margin-bottom: 1.5rem;
     }
 
-    .cta-button {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-
     .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-  .services-grid {
+    .services-grid {
         display: grid;
-        grid-template-columns: 1fr; /* Changed from repeat(2, 1fr) to 1fr */
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
@@ -467,15 +545,31 @@ footer {
         margin: 0 auto;
         padding: 1.5rem;
     }
-} 
+}
 
+/* Hide the break by default */
+.mobile-break {
+    display: none;
+}
 
+/* Show as line break on mobile only */
+@media (max-width: 768px) {
+    .mobile-break {
+        display: block;
+    }
+}
 
-
-
-/* Smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
+/* For very small screens */
+@media (max-width: 480px) {
+    .nav-mobile .logo {
+        font-size: 0.85rem !important;
+        max-width: calc(100% - 50px);
+    }
+    
+    .hamburger {
+        font-size: 1.5rem;
+        min-width: 45px;
+    }
 }
 
 .find-us {
@@ -533,5 +627,3 @@ html {
 .social-links a.facebook i {
   color: #1877F2; /* Facebook blue */
 }
-
-
