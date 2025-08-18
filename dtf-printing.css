@@ -233,7 +233,7 @@ nav {
 /* Gallery/Images Section */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
     gap: 2rem;
     margin: 3rem 0;
 }

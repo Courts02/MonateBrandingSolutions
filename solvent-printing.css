@@ -233,7 +233,7 @@ nav {
 /* Gallery/Images Section */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
     gap: 2rem;
     margin: 3rem 0;
 }
@@ -265,10 +265,13 @@ nav {
 
 /* CTA Section */
 .cta-section {
+    width: 100vw;                /* span full viewport width */
+    margin-left: calc(50% - 50vw); /* cancel out container centering if inside one */
     background: linear-gradient(135deg, #fd8d10 0%, #fd8d10 100%);
     text-align: center;
     padding: 4rem 0;
-    margin: 4rem 0 0 0;
+    margin-top: 4rem;
+    margin-bottom: auto;
 }
 
 .cta-button {
@@ -304,6 +307,8 @@ nav {
 
 /* Footer - Same as your main site */
 footer {
+    width: 100vw;                
+    margin-left: calc(50% - 50vw);
     background: #1a1a1a;
     color: white;
     text-align: center;
